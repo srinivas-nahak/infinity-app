@@ -9,7 +9,7 @@ A fully functional social media app developed using Android Java. Here users are
 - Nginx
 
 # Screenshots
-<p align="center"> <img src="screenshots/infinity_screenshot-0.jpg" width="250"/>  <img src="screenshots/infinity_screenshot-1.jpg" width="250"/>  <img src="screenshots/infinity_screenshot-2.jpg" width="250" /> <img src="screenshots/infinity_screenshot-3.jpg" width="250" /></p>
+<p align="center"> <img src="screenshots/infinity_screenshot-0.jpg" width="25%"/>  <img src="screenshots/infinity_screenshot-1.jpg" width="25%"/>  <img src="screenshots/infinity_screenshot-2.jpg" width="25%" /> <img src="screenshots/infinity_screenshot-3.jpg" width="25%" /></p>
 
 
 # Features
