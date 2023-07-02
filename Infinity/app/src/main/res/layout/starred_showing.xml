@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<custom_views_and_styles.DragToClose
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:drag="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dragViewStarred"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    drag:draggableContainer="@+id/starredMainCont"
+    drag:draggableView="@+id/starHead"
+    drag:finishActivity="false"
+    drag:closeOnClick="false"
+    >
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/starredMainCont"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        >
+        <FrameLayout
+            android:id="@+id/starHead"
+            drag:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+            <ImageButton
+                android:id="@+id/back_of_starred"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:padding="2dp"
+                android:rotation="-90"
+                drag:srcCompat="@drawable/down_arrow"
+                />
+            <TextView
+                android:id="@+id/headingStarred"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="5dp"
+            android:textSize="23sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textColor"
+            android:layout_gravity="bottom"
+            />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/noResultTxtStarred"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        drag:layout_constraintLeft_toLeftOf="parent"
+        drag:layout_constraintRight_toRightOf="parent"
+        drag:layout_constraintTop_toTopOf="parent"
+        drag:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="20dp"
+        android:visibility="gone"
+        android:textColor="@color/textColor"
+        android:text="No posts found ."
+        android:layout_marginTop="50dp"/>
+        <custom_views_and_styles.CustomRecyclerView
+            android:id="@+id/selected_society_starred"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            drag:layout_constraintTop_toBottomOf="@+id/starHead"
+            android:layout_marginTop="3dp"
+            android:layout_gravity="center_vertical" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_containerStarred"
+        drag:layout_constraintTop_toBottomOf="@+id/selected_society_starred"
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<custom_views_and_styles.CustomRecyclerView
+    android:id="@+id/starred_rView"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <FrameLayout
+        android:id="@+id/loadingViewStarred"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:layout_gravity="center"
+            android:textColor="@color/textColor"/>
+    </FrameLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+</custom_views_and_styles.DragToClose>

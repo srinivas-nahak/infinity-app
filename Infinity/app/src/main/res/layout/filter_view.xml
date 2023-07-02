@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.allattentionhere.fabulousfilter.AAH_FilterView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        >
+
+        <View
+            android:id="@+id/tabs_types"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="47dp"
+            android:background="@color/textColor"
+           />
+
+
+        <RelativeLayout
+            android:id="@+id/ll_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+           >
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/circleButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
+                app:backgroundTint="@color/colorElegantRed"
+                app:elevation="0dp" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="X"
+                android:textColor="@color/textColor"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Settings"
+            android:textColor="@color/textColor"
+            android:textColorHighlight="#000"
+            android:textSize="23sp"
+            android:fontFamily="sans-serif-condensed"
+            />
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/ll_buttons"
+            android:layout_below="@+id/tabs_types"
+            android:layout_marginTop="3dp"
+            android:fitsSystemWindows="false">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/profile_btn"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginTop="5dp"
+                android:tint="#001919"
+                app:srcCompat="@drawable/profile"
+                android:scaleType="centerInside"
+                app:backgroundTint="#fff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginTop="70dp"
+                android:textColor="@color/textColor"
+                android:text="Profile" />
+
+            <android.support.design.widget.FloatingActionButton
+            android:id="@+id/invite_btn"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="7dp"
+            app:srcCompat="@drawable/invitation_vector"
+            android:scaleType="centerInside"
+            app:backgroundTint="#fff" />
+
+            <TextView
+                android:id="@+id/invite_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="100dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginLeft="19dp"
+                android:textColor="@color/textColor"
+                android:text="Invite" />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/report_btn"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginLeft="7dp"
+                app:srcCompat="@drawable/report_btn_vector"
+                android:scaleType="centerInside"
+                android:visibility="gone"
+                app:backgroundTint="#fff" />
+
+            <TextView
+                android:id="@+id/report_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="100dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginLeft="13dp"
+                android:visibility="gone"
+                android:textColor="@color/textColor"
+                android:text="Reports" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/society_list_btn"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="200dp"
+                app:srcCompat="@drawable/society"
+                android:tint="#001919"
+                android:scaleType="centerInside"
+                app:backgroundTint="#fff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="260dp"
+                android:layout_marginEnd="11dp"
+                android:layout_marginRight="11dp"
+                android:textColor="@color/textColor"
+                android:text="Society List" />
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="70dp"
+                android:layout_height="90dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="60dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="315dp"
+                >
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/rating_btn"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                app:srcCompat="@drawable/rating_vector"
+                android:tint="#001919"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:scaleType="centerInside"
+                app:backgroundTint="#fff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_gravity="bottom"
+                android:text="Rate App" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/settings_btn"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:scaleType="centerInside"
+                android:layout_marginTop="200dp"
+                app:srcCompat="@drawable/settings"
+                android:tint="#001919"
+                app:backgroundTint="#fff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="260dp"
+                android:textColor="@color/textColor"
+                android:text="Account Settings" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="75dp"
+                android:layout_height="90dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginTop="315dp"
+                >
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/opportunity_btn"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                app:srcCompat="@drawable/opportunity_btn"
+                android:tint="#001919"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:scaleType="centerInside"
+                app:backgroundTint="#fff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="Opportunity" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/starred_btn"
+                android:layout_width="56dp"
+                android:layout_height="59dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="40dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/star_icon"
+                android:tint="#001919"
+                app:backgroundTint="#fff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="100dp"
+                android:textColor="@color/textColor"
+                android:text="Starred" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/tips_btn"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginTop="150dp"
+                app:srcCompat="@drawable/bulb_vector"
+                android:tint="#001919"
+                android:scaleType="centerInside"
+                app:backgroundTint="#fff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginTop="215dp"
+                android:textColor="@color/textColor"
+                android:text="Tips" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/logout_btn"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                app:elevation="2dp"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="20dp"
+                app:srcCompat="@drawable/logout"
+                android:tint="#001919"
+                android:scaleType="centerInside"
+                app:backgroundTint="#fff" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logout_btn"
+                android:layout_gravity="center|bottom"
+                android:textColor="@color/textColor"
+                android:text="Logout" />
+
+
+        </android.support.design.widget.CoordinatorLayout>
+
+    </RelativeLayout>
+
+</com.allattentionhere.fabulousfilter.AAH_FilterView>

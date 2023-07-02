@@ -1,0 +1,238 @@
+<custom_views_and_styles.NewCordiLay
+    android:id="@+id/mainHomeLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="45dp"
+        />
+       <!-- app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000"
+        android:elevation="0dp"
+        >
+<!--            app:layout_scrollFlags="scroll|enterAlways"
+-->
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways"
+            >
+
+            <FrameLayout
+                android:id="@+id/searchBarHome"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="3dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:foregroundGravity="center_vertical"
+                >
+                <!-- <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Search Here..."
+                     android:layout_gravity="center_horizontal"
+                     android:textColor="#fff"/>-->
+                <ImageButton
+                    android:id="@+id/searchIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="70dp"
+                    android:layout_marginEnd="70dp"
+                    android:padding="2dp"
+                    android:visibility="gone"
+                    android:scaleType="centerInside"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="end|center_vertical"
+                    app:srcCompat="@drawable/ic_magnify_black_48dp"
+                    tools:ignore="VectorDrawableCompat" />
+                <ImageButton
+                    android:id="@+id/revealBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    android:scaleType="centerInside"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:rotation="90"
+                    app:srcCompat="@drawable/thin_back_btn"
+                    tools:ignore="VectorDrawableCompat" />
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end|center_vertical"
+                    app:srcCompat="@drawable/ic_filter"
+                    app:backgroundTint="#000"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    app:elevation="0dp"
+                    app:fabSize="mini" />
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/themeChngBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/theme_btn_vector"
+                    app:backgroundTint="#000"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    app:elevation="0dp"
+                    app:fabSize="mini" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/revealItemCont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000"
+                android:layout_marginTop="50dp"
+                android:visibility="gone"
+                >
+            <RelativeLayout
+                android:id="@+id/tabLayCont"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                >
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/dummyTabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:layout_marginTop="-10dp"
+                    android:layout_below="@+id/tabLayout"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:tabIndicatorColor="@android:color/transparent" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:tabIndicatorColor="@android:color/transparent" />
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/selected_society_layout"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="35dp"
+                android:orientation="horizontal"
+                >
+
+                <custom_views_and_styles.CustomRecyclerView
+                    android:id="@+id/selected_society_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical" />
+                <custom_views_and_styles.CustomRecyclerView
+                    android:id="@+id/selected_society_infinite_timeline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_gravity="center_vertical" />
+
+            </FrameLayout>
+            </FrameLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <!-- View pager to swipe views -->
+
+    <FrameLayout
+        android:id="@+id/loadingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:layout_gravity="center"
+            android:textColor="@color/textColor"/>
+    </FrameLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/plus"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:srcCompat="@drawable/add_pic"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:scaleType="centerInside"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="70dp"
+        />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_msg_btn"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:srcCompat="@drawable/add_msg_vector"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        app:backgroundTint="#001919"
+        android:scaleType="centerInside"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="70dp"
+        android:visibility="gone"
+        />
+    <RelativeLayout
+        android:id="@+id/welcomeMsgCont"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/welcome_rect"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="#001919"
+            android:layout_centerHorizontal="true"
+            android:text="Welcome to Infinity"
+            android:layout_above="@+id/folllow_frnd_txt"
+            android:layout_marginBottom="15dp"
+            />
+        <TextView
+            android:id="@+id/folllow_frnd_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#001919"
+            android:layout_centerVertical="true"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            android:text="You can follow your friends or other people , their posts would appear here."
+            />
+        <TextView
+            android:id="@+id/world_btn_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#001919"
+            android:textAlignment="center"
+            android:layout_below="@+id/folllow_frnd_txt"
+            android:layout_centerVertical="true"
+            android:textSize="17sp"
+            android:layout_marginTop="10dp"
+            android:text="Have a look at the infinite timeline (the world button) to explore new people easily."
+            />
+
+    </RelativeLayout>
+</custom_views_and_styles.NewCordiLay>

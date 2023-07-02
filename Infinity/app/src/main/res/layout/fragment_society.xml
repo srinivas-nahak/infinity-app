@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.Society">
+    <TextView
+        android:id="@+id/soc_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text=" Societies"
+        android:textColor="@color/textColor"
+        android:textSize="35sp"
+        android:fontFamily="sans-serif-condensed"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="13dp"
+        android:text="(max 3)"
+        android:textColor="@color/textColor"
+        android:layout_below="@+id/proceed_society"/>
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/proceed_society"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:scaleX="-1"
+        android:padding="2dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/ic_arrow_left_back_black_48dp" />
+
+    <TextView
+        android:id="@+id/back_button_society"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" back"
+        android:visibility="gone"
+        android:textAlignment="gravity"
+        android:textAllCaps="false"
+        android:textColor="@color/textColor"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:scaleType="fitXY"
+        android:typeface="serif"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/societyList_recyclerView"
+        android:padding="10dp"
+        android:layout_below="@+id/soc_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

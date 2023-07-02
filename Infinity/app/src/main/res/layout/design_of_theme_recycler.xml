@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<custom_views_and_styles.NewFrameLay
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_margin="2dp"
+    android:padding="1dp"
+    >
+
+    <FrameLayout
+        android:id="@+id/themeImgCont"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/theme_bg"
+        android:layout_gravity="center"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/theme_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            />
+        <ImageView
+            android:id="@+id/tickTheme"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:srcCompat="@drawable/tick_mark"
+            android:background="#0000"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+    </FrameLayout>
+
+</custom_views_and_styles.NewFrameLay>

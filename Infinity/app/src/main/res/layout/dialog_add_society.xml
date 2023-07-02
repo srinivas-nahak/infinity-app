@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient"
+        android:paddingTop="10dp"
+        android:paddingBottom="10sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Choose Societies"
+            android:textColor="#fff"
+            android:textSize="23sp"
+            android:fontFamily="sans-serif-condensed"
+            />
+        <View
+            android:id="@+id/middleLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#fff"
+            android:layout_marginTop="43dp"
+            />
+<android.support.v7.widget.RecyclerView
+    android:layout_below="@+id/middleLine"
+    android:id="@+id/dialog_soc_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:paddingLeft="10sp"
+    android:paddingStart="10sp"
+    android:paddingRight="10sp"
+    android:paddingEnd="10sp"
+    android:paddingBottom="10sp"
+    />
+        <Button
+            android:id="@+id/add_soc_to_list"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/dialog_soc_list"
+            android:background="@drawable/button_selector"
+            android:text="done"
+            android:textAlignment="gravity"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor="#001919"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
